@@ -1,0 +1,29 @@
+$animation-prefixes: o moz webkit spec ;
+
+@mixin animation-name($name...) {
+    @include prefixer(animation-name, $name, $animation-prefixes);
+}
+@mixin animation-duration($duration...) {
+    @include prefixer(animation-duration, $duration, $animation-prefixes);
+}
+@mixin animation-timing-function($timing...) {
+    @include prefixer(animation-timing-function, $timing, $animation-prefixes);
+}
+@mixin animation-iteration-count($count...) {
+   @include prefixer(animation-iteration-count, $count, $animation-prefixes);
+}
+@mixin animation-direction($direction...) {
+    @include prefixer(animation-direction, $direction, $animation-prefixes);
+}
+@mixin animation-delay($delay...) {
+    @include prefixer(animation-delay, $delay, $animation-prefixes);
+}        
+@mixin animation-fill-mode($fill...) {
+     @include prefixer(animation-fill-mode, $fill, $animation-prefixes);
+}
+@mixin animation-play-state($state...) {
+    @include prefixer(animation-play-state, $state, $animation-prefixes);
+}
+@mixin animation($animation...) {
+     @include prefixer(animation, $animation, $animation-prefixes);
+}

@@ -1,0 +1,12 @@
+// Taken from https://github.com/thoughtbot/bourbon/issues/230
+	
+@mixin prefixer($property, $value, $prefixes) {
+  @each $prefix in $prefixes {
+    @if $prefix == spec {
+      #{$property}: $value;
+    }
+    @else {
+      -#{$prefix}-#{$property}: $value;
+    }
+  }
+}

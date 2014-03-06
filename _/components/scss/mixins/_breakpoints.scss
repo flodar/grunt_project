@@ -1,0 +1,32 @@
+$breakpoints: stewie 18.74em, brian 31.25em, chris 48.875em, lois 60em, peter 71.875em !default;
+
+@mixin bp($point) {
+
+  @each $breakpoint in $breakpoints {
+    $name: nth($breakpoint, 1);
+    $width: nth($breakpoint, 2);
+    
+
+      @if $name == $point {
+        @media (min-width: $width) {
+          @content;
+        }
+      } 
+    }
+}
+
+
+/*
+
+Mobile first breakpoints e.g.
+
+div {
+	width: 100%;
+
+	@include bp(chris){
+		margin: 1rem auto;
+		width: 90%;
+	}
+}
+
+*/

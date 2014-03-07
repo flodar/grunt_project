@@ -14,3 +14,10 @@ $helvetica: "Helvetica Neue", Helvetica, arial, sans-serif;
 $verdana: Verdana, Geneva, sans-serif;
 
 $debugmode: false;
+
+// SUSY
+
+$total-columns: 12;
+$column-width: 4em;        
+$gutter-width: 1em;
+$grid-padding: $gutter-width;

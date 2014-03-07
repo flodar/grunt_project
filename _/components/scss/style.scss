@@ -1,4 +1,5 @@
 @import "compass";
+@import "susy";
 
 //-----------Config--------------//
 //-------------------------------//
@@ -8,7 +9,6 @@
 //-----------Mixins--------------//
 //-------------------------------//
 
-@import "mixins/_prefixer";
 @import "mixins/_animations";
 @import "mixins/_breakpoints";
 @import "mixins/_keyframes";

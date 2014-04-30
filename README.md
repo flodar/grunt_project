@@ -1,4 +1,4 @@
-grunt
+Grunt Project
 =====
 
-Grunt boilerplate
+This is my personal Grunt boilerplate for starting projects

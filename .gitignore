@@ -6,7 +6,6 @@ lib-cov
 *.out
 *.pid
 *.gz
-*.css.map
 
 pids
 logs
@@ -17,3 +16,4 @@ node_modules
 
 .sass-cache
 
+.css.map

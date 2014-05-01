@@ -1,19 +1,13 @@
 /*
- * SMACSS + SCSS starter v2.0
- * Inspired by SMACSS http://smacss.com
- * Author: @jonathanpath
- * Date: 11 July 2013
- *
- * https://github.com/jonathanpath/SASS-SMACSS
- * See file structure in http://jonathanpath.com/sass+smacss/scss/style.scss
+ * SMACSS + SCSS starter v1.0
+ * Inspired by SMACSS http://smacss.com and @jonathanpath
+ *  
  * Sass Structure inspired by : https://github.com/sutter/POPY-starter-HTML-SCSS
- *
- * Coding rules : https://github.com/necolas/idiomatic-css
  *
  */
 
 /* Compass */
-@import "compass/css3/images";
+@import "compass";
 
 /* Tools */
 @import "tools/site-settings";

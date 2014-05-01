@@ -1,8 +1,0 @@
-// http://germanforblack.com/post/43975575422/protip-all-browsers-that-support-svg-background-images
-
-$public_path: "./";
- 
-@mixin vector-bg($name) {
-  background-image: url('#{$public_path}images/#{$name}.png');
-  background-image: none, url('#{$public_path}images/#{$name}.svg');
-}

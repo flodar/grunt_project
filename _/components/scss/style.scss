@@ -1,69 +1,41 @@
-@import "compass";
-@import "susy";
+/*
+ * SMACSS + SCSS starter v2.0
+ * Inspired by SMACSS http://smacss.com
+ * Author: @jonathanpath
+ * Date: 11 July 2013
+ *
+ * https://github.com/jonathanpath/SASS-SMACSS
+ * See file structure in http://jonathanpath.com/sass+smacss/scss/style.scss
+ * Sass Structure inspired by : https://github.com/sutter/POPY-starter-HTML-SCSS
+ *
+ * Coding rules : https://github.com/necolas/idiomatic-css
+ *
+ */
 
-//-----------Config--------------//
-//-------------------------------//
-@import "_vars";
+/* Compass */
+@import "compass/css3/images";
 
+/* Tools */
+@import "tools/site-settings";
+@import "tools/mixins";
+@import "tools/functions";
+@import "tools/helpers";
 
-//-----------Mixins--------------//
-//-------------------------------//
+/* Base */
+@import "base/normalize";
+@import "base/base";
+@import "base/form";
 
-@import "mixins/_animations";
-@import "mixins/_breakpoints";
-@import "mixins/_keyframes";
-@import "mixins/_fontsize";
-@import "mixins/_scrollbars";
-@import "mixins/_placeholder";
-@import "mixins/_vector-bg";
+/* Fonts */
+//@import "fonts/...";
 
+/* Layout */
+@import "layout/header";
+@import "layout/nav";
+@import "layout/footer";
+@import "layout/constrained";
 
-
-//-----------Modules-------------//
-//-------------------------------//
-
-
-// Objects and modules
-@import "modules/_base";
-@import "modules/_buttons";
-@import "modules/_forms";
-@import "modules/_lists";
-@import "modules/_typography";
-@import "modules/_tables";
-@import "modules/_misc";
-@import "modules/_media";
-@import "modules/_app";
-
-// Enhancement modules
-@import "helpers/_print";
-@import "helpers/_debug";
-
-
-// The dirty CSS
-@import "modules/_shame";
-
-
-//---------Placeholders----------//
-//-------------------------------//
-
-@import "placeholders/_center";
-@import "placeholders/_clearfix";
-
-
-
-//----------Partials-------------//
-//-------------------------------//
-
-@import "partials/_header";
-@import "partials/_nav";
-@import "partials/_sidebar";
-@import "partials/_main";
-@import "partials/_footer";
-
-
-
-//-----------Vendor--------------//
-//-------------------------------//
-
-
-
+/* Modules */
+@import "modules/btn";
+@import "modules/icons";
+//@import "modules/animations";

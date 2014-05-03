@@ -5,12 +5,12 @@ module.exports = function(grunt) {
     
      watch: {
 
-      livereload: {
-        files: ['*.html', '*.php', '_/js/*.{js,json}', '_/css/*.css','_/img/**/*.{png,jpg,jpeg,gif,webp,svg}'],
-        options: {
-            livereload: true
-        }
-      },//livereload
+      // livereload: {
+      //   files: ['*.html', '*.php', '_/js/*.{js,json}', '_/css/*.css','_/img/**/*.{png,jpg,jpeg,gif,webp,svg}'],
+      //   options: {
+      //       livereload: true
+      //   }
+      // },//livereload
 
       scss: {
         files: '_/components/scss/**/*.scss',
@@ -102,19 +102,49 @@ module.exports = function(grunt) {
         src: '_/css/style.css'
       }
 
-    } //autoprefixer
+    }, //autoprefixer
 
+
+
+    browserSync: {
+      dev: {
+          bsFiles: {
+              src : [
+                    '_/css/*.css',
+                    '_/img/**/*.jpg',
+                    '_/img/**/*.png',
+                    '_/img/**/*.svg',
+                    '_/js/**/*.js',
+                    '**/*.php',
+                    '**/*.html'
+                ]
+          },
+          options: {
+              watchTask: true,
+              debugInfo: true,
+              logConnections: true,
+              notify: true,
+              proxy: "framework.dev:8888",
+              ghostMode: {
+                scroll: true,
+                links: true,
+                forms: true
+              }
+
+          }
+      }
+    } // browserSync
   
-
-  });
+});
   
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-browser-sync');
   
 
-  grunt.registerTask('default', ['watch']);
+  grunt.registerTask('default', ["browserSync", "watch"]);
 
 };

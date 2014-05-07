@@ -26,8 +26,8 @@ module.exports = function(grunt) {
       },//scripts
 
       images: {
-        files: ['_/img/*.{png,jpg,gif}'],
-        tasks: ['imagemin'],
+        files: ['_/components/img/*.{png,jpg,gif}'],
+        tasks: ['newer:imagemin'],
         options: {
               spawn: false,
         }
@@ -57,38 +57,13 @@ module.exports = function(grunt) {
 
     imagemin: {
       
-      options:{
-        cache:false
-      },
-
-      png: {
-        options: {
-            optimizationLevel: 7
-        },
-        files: [
-            {
-                expand: true,
-                cwd: '_/img/',
-                src: ['*.png'],
-                dest: '_/img/opt/',
-                ext: '.png'
-            }
-        ]
-      },
-
-      jpg: {
-        options: {
-            progressive: true
-        },
-        files: [
-            {
-                expand: true,
-                cwd: '_/img/',
-                src: ['*.jpg'],
-                dest: '_/img/opt/',
-                ext: '.jpg'
-            }
-        ]
+      main: {
+        files: [{
+          expand: true,
+          cwd: '_/components/img/',
+          src: ['**/*.{png,jpg,gif,svg}'],
+          dest: '_/img/'
+        }]
       }
 
     },//imagemin
@@ -141,6 +116,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
+  grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-browser-sync');
   

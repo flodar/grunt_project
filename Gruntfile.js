@@ -27,6 +27,7 @@ module.exports = function(grunt) {
 
       images: {
         files: ['_/components/img/*.{png,jpg,gif}'],
+        // only minify new images
         tasks: ['newer:imagemin'],
         options: {
               spawn: false,

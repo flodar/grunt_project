@@ -5,13 +5,6 @@ module.exports = function(grunt) {
     
      watch: {
 
-      // livereload: {
-      //   files: ['*.html', '*.php', '_/js/*.{js,json}', '_/css/*.css','_/img/**/*.{png,jpg,jpeg,gif,webp,svg}'],
-      //   options: {
-      //       livereload: true
-      //   }
-      // },//livereload
-
       scss: {
         files: '_/components/scss/**/*.scss',
         tasks: ['compass','autoprefixer']

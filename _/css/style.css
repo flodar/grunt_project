@@ -277,7 +277,7 @@ dfn {
  * contexts in Firefox 4+, Safari 5, and Chrome.
  */
 h1 {
-  font-size: 2em;
+  font-size: 4em;
   margin: 0.67em 0;
 }
 
@@ -558,7 +558,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   font-size: 1em;
-  line-height: 1.5;
+  line-height: 1.2;
 }
 
 a {

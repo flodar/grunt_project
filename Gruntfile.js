@@ -33,7 +33,7 @@ module.exports = function(grunt) {
     uglify: {
       my_target: {
         files: {
-          '_/js/scripts.min.js': ['_/components/js/vendor/*.js','!_/components/js/vendor/modernizr-2.6.2.min.js','_/components/js/scripts.js']
+          '_/js/scripts.min.js': ['_/components/js/vendor/*.js','_/components/js/scripts.js']
         }
       }//my_target
     
